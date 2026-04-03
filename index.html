@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GYU DONG KIM — Glass Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Deep space grid for depth -->
+  <div class="space-grid" aria-hidden="true"></div>
+
+  <!-- Star field — three layers at different speeds -->
+  <div class="stars stars-far" aria-hidden="true"></div>
+  <div class="stars stars-mid" aria-hidden="true"></div>
+  <div class="stars stars-near" aria-hidden="true"></div>
+
+  <!-- Aurora Background Layers -->
+  <div class="aurora-layer aurora-1" aria-hidden="true"></div>
+  <div class="aurora-layer aurora-2" aria-hidden="true"></div>
+  <div class="aurora-layer aurora-3" aria-hidden="true"></div>
+
+  <!-- Nebula clouds -->
+  <div class="nebula nebula-1" aria-hidden="true"></div>
+  <div class="nebula nebula-2" aria-hidden="true"></div>
+
+  <!-- Floating Gradient Orbs -->
+  <div class="orb orb-pink"  aria-hidden="true"></div>
+  <div class="orb orb-purple" aria-hidden="true"></div>
+  <div class="orb orb-blue"  aria-hidden="true"></div>
+  <div class="orb orb-teal"  aria-hidden="true"></div>
+  <div class="orb orb-rose"  aria-hidden="true"></div>
+  <div class="orb orb-gold"  aria-hidden="true"></div>
+  <div class="orb orb-cyan"  aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="glass-cursor" id="glassCursor" aria-hidden="true"></div>
+
+  <!-- Floating Nav -->
+  <nav class="glass-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-brand">GDK<span class="brand-dot">.</span></div>
+    <div class="nav-links">
+      <a href="#journey" class="nav-link">Journey</a>
+      <a href="#tennis"  class="nav-link">Tennis</a>
+      <a href="#philosophy" class="nav-link">Philosophy</a>
+      <a href="#now"     class="nav-link">Now</a>
+      <a href="#contact" class="nav-link">Connect</a>
+      <div class="theme-switch" id="themeToggle" role="button" tabindex="0" aria-label="Toggle light/dark mode">
+        <span class="switch-label" id="switchLabel">LIGHT</span>
+        <div class="switch-thumb" id="switchThumb"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================================================
+       HERO — Full-screen 3D Glass Universe
+  ====================================================== -->
+  <section class="hero-universe" aria-labelledby="hero-name">
+
+    <!-- Floating glass pills in 3D space -->
+    <div class="hero-pills" aria-hidden="true">
+      <span class="hero-pill pill-1">DREAMER</span>
+      <span class="hero-pill pill-2">LEARNER</span>
+      <span class="hero-pill pill-3">COACH</span>
+      <span class="hero-pill pill-4">TENNIS COACH</span>
+      <span class="hero-pill pill-5">EXPLORER</span>
+    </div>
+
+    <!-- Name in 3D depth layers -->
+    <div class="hero-name-stage">
+      <div class="hero-name-layer layer-back" aria-hidden="true">GYU DONG</div>
+      <h1 class="hero-name-main" id="hero-name" data-split>GYU DONG</h1>
+      <div class="hero-name-layer layer-front" aria-hidden="true">GYU DONG</div>
+
+      <div class="hero-kim-row">
+        <span class="hero-kim" data-split>KIM</span>
+        <div class="hero-tag-stack">
+          <span class="hero-tag-badge">TENNIS COACH</span>
+          <span class="hero-tag-badge outline">SINCE ALWAYS LEARNING</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint-3d" aria-hidden="true">
+      <div class="scroll-sphere"></div>
+      <span class="scroll-label">SCROLL</span>
+    </div>
+
+  </section>
+
+  <!-- ======================================================
+       INTRO — 새로운 챕터
+  ====================================================== -->
+  <section class="intro-chapter" aria-label="Intro">
+    <div class="intro-inner scroll-reveal">
+      <p class="intro-line">수학을 전공하고, 금융업에 종사하고, 3D프린팅을 가르치고,</p>
+      <p class="intro-line">인테리어를 디자인하고, 지금은 테니스를 가르칩니다.</p>
+      <p class="intro-bold">경계 없이 살아온 한 사람의 이야기.</p>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       MARQUEE
+  ====================================================== -->
+  <div class="marquee-cosmos" aria-hidden="true">
+    <div class="marquee-inner">
+      <span>MATHEMATICIAN</span><span class="sep">·</span>
+      <span>FINANCE</span><span class="sep">·</span>
+      <span>3D PRINTING</span><span class="sep">·</span>
+      <span>INTERIOR DESIGNER</span><span class="sep">·</span>
+      <span>TENNIS COACH</span><span class="sep">·</span>
+      <span>AI EXPLORER</span><span class="sep">·</span>
+      <span>DREAMER</span><span class="sep">·</span>
+      <span>MATHEMATICIAN</span><span class="sep">·</span>
+      <span>FINANCE</span><span class="sep">·</span>
+      <span>3D PRINTING</span><span class="sep">·</span>
+      <span>INTERIOR DESIGNER</span><span class="sep">·</span>
+      <span>TENNIS COACH</span><span class="sep">·</span>
+      <span>AI EXPLORER</span><span class="sep">·</span>
+      <span>DREAMER</span><span class="sep">·</span>
+    </div>
+  </div>
+
+  <!-- ======================================================
+       JOURNEY — 3D Card Deck Fan
+  ====================================================== -->
+  <section class="journey-cosmos" id="journey" aria-labelledby="journey-heading">
+
+    <div class="journey-header scroll-reveal">
+      <span class="cosmos-num">01</span>
+      <h2 id="journey-heading" class="cosmos-title">MY JOURNEY</h2>
+      <p class="cosmos-sub">모든 과정이 나의 역사다</p>
+    </div>
+
+    <!-- 3D Fan deck -->
+    <div class="deck-stage" role="list">
+
+      <div class="deck-card glass-card tilt-card" role="listitem" data-deck="0">
+        <div class="glass-reflection"></div>
+        <div class="deck-chapter">Chapter 01</div>
+        <div class="deck-icon" aria-hidden="true">📐</div>
+        <h3 class="deck-title">수학의 세계</h3>
+        <p class="deck-body">숫자와 논리의 세계에서 시작했다. 수학과를 졸업하며 세상을 구조적으로 바라보는 눈을 얻었다.</p>
+        <span class="deck-tag">MATHEMATICS</span>
+      </div>
+
+      <div class="deck-card glass-card tilt-card" role="listitem" data-deck="1">
+        <div class="glass-reflection"></div>
+        <div class="deck-chapter">Chapter 02</div>
+        <div class="deck-icon" aria-hidden="true">💹</div>
+        <h3 class="deck-title">금융의 현장</h3>
+        <p class="deck-body">수학적 사고를 현실에 적용했다. 금융업에서 데이터와 사람, 돈의 흐름을 배웠다.</p>
+        <span class="deck-tag">FINANCE</span>
+      </div>
+
+      <div class="deck-card glass-card tilt-card" role="listitem" data-deck="2">
+        <div class="glass-reflection"></div>
+        <div class="deck-chapter">Chapter 03</div>
+        <div class="deck-icon" aria-hidden="true">🧊</div>
+        <h3 class="deck-title">3D 프린팅 강사</h3>
+        <p class="deck-body">상상을 현실로 만드는 기술. 디지털과 물리적 세계의 교차점에서 가르치는 즐거움을 알게 되었다.</p>
+        <span class="deck-tag">3D PRINTING</span>
+      </div>
+
+      <div class="deck-card glass-card tilt-card" role="listitem" data-deck="3">
+        <div class="glass-reflection"></div>
+        <div class="deck-chapter">Chapter 04</div>
+        <div class="deck-icon" aria-hidden="true">🏠</div>
+        <h3 class="deck-title">인테리어 디자이너 <em>7년</em></h3>
+        <p class="deck-body">공간이 사람의 감정을 바꾼다는 것을 7년간 체험했다. 빈 공간에 이야기를 채워넣는 일.</p>
+        <span class="deck-tag">INTERIOR DESIGN</span>
+      </div>
+
+      <div class="deck-card glass-card tilt-card" role="listitem" data-deck="4">
+        <div class="glass-reflection"></div>
+        <div class="deck-chapter">Chapter 05</div>
+        <div class="deck-icon" aria-hidden="true">🎾</div>
+        <h3 class="deck-title">테니스 코치</h3>
+        <p class="deck-body">대학 졸업 후 테니스에 깊이 빠져들었다. 비가 오나 눈이 오나 매일 6시간 코트에 있었다. 누구보다 열심히 했다.</p>
+        <span class="deck-tag">TENNIS COACH</span>
+      </div>
+
+      <div class="deck-card glass-card tilt-card card-now" role="listitem" data-deck="5">
+        <div class="glass-reflection"></div>
+        <div class="now-glow-ring" aria-hidden="true"></div>
+        <div class="deck-chapter">Chapter 06 — NOW</div>
+        <div class="deck-icon" aria-hidden="true">🤖</div>
+        <h3 class="deck-title">AI 탐험가</h3>
+        <p class="deck-body">AI가 열어주는 새로운 가능성에 매료되었다. 코딩을 배우고, AI를 탐구하며, 또 한 번의 새로운 챕터를 쓰고 있다.</p>
+        <span class="deck-tag active-tag">AI EXPLORER</span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================================
+       STATEMENT 1 — Full-bleed Glass
+  ====================================================== -->
+  <section class="statement-cosmos scroll-reveal" aria-label="Statement">
+    <div class="statement-glass statement-glass-wide">
+      <div class="glass-reflection"></div>
+      <p class="statement-text statement-text-4line">
+        <span class="st-line">남들이 정해놓은</span>
+        <span class="st-line st-stroke-line">경계를</span>
+        <span class="st-line st-glow-line">무시하는</span>
+        <span class="st-line">사람.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       TENNIS — 3D Extruded Stats
+  ====================================================== -->
+  <section class="tennis-cosmos" id="tennis" aria-labelledby="tennis-heading">
+
+    <div class="journey-header scroll-reveal">
+      <span class="cosmos-num">02</span>
+      <h2 id="tennis-heading" class="cosmos-title">TENNIS</h2>
+      <p class="cosmos-sub">코트 위에서 배운 것들</p>
+    </div>
+
+    <div class="tennis-stage">
+
+      <!-- Big 6h extruded -->
+      <div class="tennis-hero-num scroll-reveal" aria-label="매일 6시간">
+        <div class="extruded-num" aria-hidden="true">6h</div>
+        <p class="tennis-hero-label">매일, 비가 오나 눈이 오나<br />코트에서 보낸 시간</p>
+      </div>
+
+      <!-- Floating glass bubbles -->
+      <div class="tennis-bubbles">
+
+        <div class="bubble glass-card tilt-card scroll-reveal">
+          <div class="glass-reflection"></div>
+          <div class="bubble-icon" aria-hidden="true">🏆</div>
+          <h3>전국대회 우승</h3>
+          <p>라켓을 처음 잡은 레슨생들이 이제는 전국대회에서 우승한다.</p>
+        </div>
+
+        <div class="bubble glass-card tilt-card scroll-reveal">
+          <div class="glass-reflection"></div>
+          <div class="bubble-icon" aria-hidden="true">😊</div>
+          <h3>삶이 행복해졌다</h3>
+          <p>"운동하며 삶이 행복해졌다"고 말해줄 때, 그것이 코치의 보람이다.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================================
+       PHILOSOPHY — 2x2 Rotated Glass Grid
+  ====================================================== -->
+  <section class="philosophy-cosmos" id="philosophy" aria-labelledby="phil-heading">
+
+    <div class="journey-header scroll-reveal">
+      <span class="cosmos-num">03</span>
+      <h2 id="phil-heading" class="cosmos-title">PHILOSOPHY</h2>
+      <p class="cosmos-sub">삶을 이끌어온 생각들</p>
+    </div>
+
+    <div class="phil-grid" role="list">
+
+      <div class="phil-card glass-card tilt-card scroll-reveal" role="listitem" style="--card-rot: -2deg; --card-rotz: 1deg;">
+        <div class="glass-reflection"></div>
+        <span class="phil-num" aria-hidden="true">01</span>
+        <h3>모든 과정이 역사다</h3>
+        <p>모든 사람에겐 자신만의 특별한 역사가 있다. 나에게는 모든 과정이 나의 역사였다.</p>
+      </div>
+
+      <div class="phil-card glass-card tilt-card scroll-reveal" role="listitem" style="--card-rot: 1.5deg; --card-rotz: -1.5deg;">
+        <div class="glass-reflection"></div>
+        <span class="phil-num" aria-hidden="true">02</span>
+        <h3>진심을 다했다</h3>
+        <p>내가 좋아하고 잘하는 일을 했다. 모든 일에 진심을 다했고, 스스로 열심히 했다고 생각한다.</p>
+      </div>
+
+      <div class="phil-card glass-card tilt-card scroll-reveal" role="listitem" style="--card-rot: 2deg; --card-rotz: 1deg;">
+        <div class="glass-reflection"></div>
+        <span class="phil-num" aria-hidden="true">03</span>
+        <h3>경계를 무시한다</h3>
+        <p>나는 배우는 사람이다. 남들이 정해놓은 경계를 무시하는 사람이다.</p>
+      </div>
+
+      <div class="phil-card glass-card tilt-card scroll-reveal" role="listitem" style="--card-rot: -1deg; --card-rotz: -2deg;">
+        <div class="glass-reflection"></div>
+        <span class="phil-num" aria-hidden="true">04</span>
+        <h3>영원한 몽상가</h3>
+        <p>5년 후에도, 10년 후에도 몽상가였으면 좋겠다. 상상하는 것을 멈추지 않겠다.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================================
+       STATEMENT 2
+  ====================================================== -->
+  <section class="statement-cosmos scroll-reveal" aria-label="Statement">
+    <div class="statement-glass statement-glass-sm">
+      <div class="glass-reflection"></div>
+      <p class="statement-text statement-text-sm">
+        <span class="st-line st-stroke-line">나는 정말 원하는 게</span>
+        <span class="st-line">무엇일까?</span>
+        <span class="st-line st-glow-line">내가 잘하는 것이</span>
+        <span class="st-line">무엇일까?</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       NOW — AI Chapter
+  ====================================================== -->
+  <section class="now-cosmos" id="now" aria-labelledby="now-heading">
+
+    <div class="journey-header scroll-reveal">
+      <span class="cosmos-num">04</span>
+      <h2 id="now-heading" class="cosmos-title">NOW</h2>
+      <p class="cosmos-sub">지금 이 순간</p>
+    </div>
+
+    <div class="now-stage now-stage-single">
+      <div class="now-ai-card glass-card tilt-card scroll-reveal now-ai-full">
+        <div class="glass-reflection"></div>
+        <div class="ai-badge" aria-hidden="true">AI</div>
+        <h3>AI 활용에 빠져있다</h3>
+        <p>기술이 열어주는 새로운 가능성에 매료되어 있다. 코딩을 배우고, AI를 탐구하며, 또 한 번의 새로운 챕터를 쓰고 있다.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======================================================
+       MANIFESTO — 독립 챕터
+  ====================================================== -->
+  <section class="manifesto-cosmos" aria-label="Manifesto">
+    <div class="manifesto-inner scroll-reveal">
+      <span class="cosmos-num">05</span>
+      <h2 class="cosmos-title manifesto-title">MANIFESTO</h2>
+      <div class="manifesto-quote">
+        <p class="manifesto-text">저는 개발자가</p>
+        <p class="manifesto-text">아닙니다.</p>
+        <p class="manifesto-text manifesto-accent">하지만 열심히</p>
+        <p class="manifesto-text manifesto-accent">배우겠습니다.</p>
+      </div>
+      <p class="manifesto-author">— Gyu Dong Kim</p>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CONNECT — 통합 (카운터 + 연락처 + 방명록)
+  ====================================================== -->
+  <section class="connect-cosmos" id="contact" aria-labelledby="connect-heading">
+
+    <div class="journey-header scroll-reveal">
+      <span class="cosmos-num">06</span>
+      <h2 id="connect-heading" class="cosmos-title">CONNECT</h2>
+      <p class="cosmos-sub">이야기를 나눠요</p>
+    </div>
+
+    <!-- Top row: Counter + Contact cards -->
+    <div class="connect-top">
+      <!-- Visitor Counter -->
+      <div class="connect-counter glass-card tilt-card scroll-reveal">
+        <div class="glass-reflection"></div>
+        <p class="counter-label">VISITORS</p>
+        <div class="counter-num" id="visitorCount" aria-live="polite">0</div>
+      </div>
+
+      <!-- Contact Cards -->
+      <a href="mailto:kokoro456@gmail.com" class="connect-link glass-card tilt-card scroll-reveal">
+        <div class="glass-reflection"></div>
+        <span class="connect-link-icon">&#9993;</span>
+        <div class="connect-link-info">
+          <span class="connect-link-label">EMAIL</span>
+          <span class="connect-link-val">kokoro456@gmail.com</span>
+        </div>
+        <span class="connect-link-arrow">&#8599;</span>
+      </a>
+
+      <a href="tel:01085755554" class="connect-link glass-card tilt-card scroll-reveal">
+        <div class="glass-reflection"></div>
+        <span class="connect-link-icon">&#9742;</span>
+        <div class="connect-link-info">
+          <span class="connect-link-label">PHONE</span>
+          <span class="connect-link-val">010-8575-5554</span>
+        </div>
+        <span class="connect-link-arrow">&#8599;</span>
+      </a>
+    </div>
+
+    <!-- Guestbook -->
+    <div class="connect-guestbook" id="guestbook">
+      <h3 class="gb-title scroll-reveal">방명록</h3>
+
+      <form class="gb-form glass-card scroll-reveal" id="gbForm">
+        <div class="glass-reflection"></div>
+        <div class="gb-row">
+          <div class="gb-field gb-field-name">
+            <input type="text" id="gbName" class="gb-input" placeholder="이름" required />
+          </div>
+          <div class="gb-field gb-field-msg">
+            <input type="text" id="gbMsg" class="gb-input" placeholder="메시지를 남겨주세요..." required />
+          </div>
+          <button type="submit" class="gb-submit">남기기</button>
+        </div>
+      </form>
+
+      <div class="gb-entries" id="gbEntries"></div>
+    </div>
+
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="glass-footer" role="contentinfo">
+    <div class="footer-glass">
+      <span class="footer-name">GYU DONG KIM</span>
+      <span class="footer-copy">&copy; 2026 Built with curiosity &amp; obsession.</span>
+    </div>
+  </footer>
+
+  <!-- Inline: 3D mouse-tilt + cursor + deck fan -->
+  <script>
+  (function () {
+    'use strict';
+
+    // ---- Respect reduced motion ----
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ---- Custom glass cursor ----
+    const cursor = document.getElementById('glassCursor');
+    if (cursor && !prefersReducedMotion) {
+      let cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+      let tx = cx, ty = cy;
+
+      document.addEventListener('mousemove', e => {
+        tx = e.clientX;
+        ty = e.clientY;
+      });
+
+      function animateCursor() {
+        cx += (tx - cx) * 0.12;
+        cy += (ty - cy) * 0.12;
+        cursor.style.transform = `translate(${cx - 20}px, ${cy - 20}px)`;
+        requestAnimationFrame(animateCursor);
+      }
+      animateCursor();
+
+      document.querySelectorAll('a, button, .tilt-card').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+      });
+    }
+
+    // ---- 3D Mouse-tilt on ALL .glass-card + idle float ----
+    if (!prefersReducedMotion) {
+      document.querySelectorAll('.glass-card').forEach((card, idx) => {
+        let targetRX = 0, targetRY = 0;
+        let currentRX = 0, currentRY = 0;
+        let isHovering = false;
+        const floatSpeed = 0.0003 + idx * 0.00005;
+        const floatAmp = 2 + (idx % 3);
+        const floatOffset = idx * 1.3;
+
+        card.addEventListener('mouseenter', () => { isHovering = true; });
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const dx = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+          const dy = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+          targetRY = dx * 18;
+          targetRX = -dy * 14;
+        });
+        card.addEventListener('mouseleave', () => {
+          isHovering = false;
+          targetRX = 0;
+          targetRY = 0;
+        });
+
+        function animateTilt() {
+          // Idle float when not hovering
+          if (!isHovering) {
+            const t = Date.now() * floatSpeed + floatOffset;
+            const frx = Math.sin(t * 0.7) * 1.5;
+            const fry = Math.cos(t * 0.5) * 1;
+            currentRX += (frx - currentRX) * 0.03;
+            currentRY += (fry - currentRY) * 0.03;
+            card.style.transform = `perspective(800px) rotateX(${currentRX}deg) rotateY(${currentRY}deg)`;
+          } else {
+            currentRX += (targetRX - currentRX) * 0.08;
+            currentRY += (targetRY - currentRY) * 0.08;
+            card.style.transform = `perspective(800px) rotateX(${currentRX}deg) rotateY(${currentRY}deg) translateZ(12px) scale(1.02)`;
+          }
+          requestAnimationFrame(animateTilt);
+        }
+        animateTilt();
+      });
+    }
+
+    // ---- 3D Background — mouse parallax on entire page ----
+    if (!prefersReducedMotion) {
+      const grid = document.querySelector('.space-grid');
+      const nebula1 = document.querySelector('.nebula-1');
+      const nebula2 = document.querySelector('.nebula-2');
+      const starLayers = document.querySelectorAll('.stars');
+      const orbEls = document.querySelectorAll('.orb');
+
+      document.addEventListener('mousemove', e => {
+        const mx = (e.clientX / window.innerWidth - 0.5) * 2;  // -1 to 1
+        const my = (e.clientY / window.innerHeight - 0.5) * 2;
+
+        // Grid tilts with mouse
+        if (grid) {
+          grid.style.transform = `perspective(500px) rotateX(${35 + my * 5}deg) rotateY(${mx * 3}deg) scale(2.5)`;
+        }
+
+        // Stars shift at different depths
+        starLayers.forEach((s, i) => {
+          const depth = (i + 1) * 8;
+          s.style.transform = `translate(${mx * depth}px, ${my * depth}px)`;
+        });
+
+        // Nebula slow shift
+        if (nebula1) nebula1.style.transform = `translate(${mx * 15}px, ${my * 15}px)`;
+        if (nebula2) nebula2.style.transform = `translate(${mx * -12}px, ${my * -12}px)`;
+
+        // Orbs subtle shift
+        orbEls.forEach((orb, i) => {
+          const d = 5 + i * 3;
+          orb.style.transform = `translate(${mx * d}px, ${my * d}px)`;
+        });
+      });
+    }
+
+    // Deck fan removed — replaced by grid layout + 3D tilt on all glass-cards
+
+    // Scroll parallax is now combined in the mouse parallax above
+    // via scroll listener that updates shared offset variables
+    if (!prefersReducedMotion) {
+      let scrollMx = 0, scrollMy = 0;
+      // Store latest mouse position for combining
+      document.addEventListener('mousemove', e => {
+        scrollMx = (e.clientX / window.innerWidth - 0.5) * 2;
+        scrollMy = (e.clientY / window.innerHeight - 0.5) * 2;
+      });
+
+      const _grid = document.querySelector('.space-grid');
+      const _stars = document.querySelectorAll('.stars');
+      const _neb1 = document.querySelector('.nebula-1');
+      const _neb2 = document.querySelector('.nebula-2');
+      const _orbs = document.querySelectorAll('.orb');
+
+      window.addEventListener('scroll', () => {
+        const sy = window.scrollY;
+        // Combine scroll Y offset with mouse XY
+        _stars.forEach((s, i) => {
+          const depth = (i + 1) * 8;
+          const scrollSpeed = 0.015 + i * 0.025;
+          s.style.transform = `translate(${scrollMx * depth}px, ${scrollMy * depth + sy * scrollSpeed}px)`;
+        });
+        if (_neb1) _neb1.style.transform = `translate(${scrollMx * 15}px, ${scrollMy * 15 + sy * 0.02}px)`;
+        if (_neb2) _neb2.style.transform = `translate(${scrollMx * -12}px, ${scrollMy * -12 + sy * 0.035}px)`;
+        _orbs.forEach((orb, i) => {
+          const d = 5 + i * 3;
+          const scrollSpeed = 0.04 + i * 0.02;
+          orb.style.transform = `translate(${scrollMx * d}px, ${scrollMy * d + sy * scrollSpeed}px)`;
+        });
+      }, { passive: true });
+    }
+
+    // ---- Inject hover effect layers into all glass-cards ----
+    document.querySelectorAll('.glass-card').forEach(card => {
+      // Aurora border
+      if (!card.querySelector('.aurora-border')) {
+        const ab = document.createElement('div');
+        ab.className = 'aurora-border';
+        ab.setAttribute('aria-hidden', 'true');
+        card.insertBefore(ab, card.firstChild);
+      }
+      // Holographic layer
+      if (!card.querySelector('.holo-layer')) {
+        const hl = document.createElement('div');
+        hl.className = 'holo-layer';
+        hl.setAttribute('aria-hidden', 'true');
+        card.appendChild(hl);
+      }
+      // Spotlight follow
+      if (!card.querySelector('.spotlight')) {
+        const sl = document.createElement('div');
+        sl.className = 'spotlight';
+        sl.setAttribute('aria-hidden', 'true');
+        card.appendChild(sl);
+      }
+
+      // Mouse tracking for spotlight + holographic
+      card.addEventListener('mousemove', function(e) {
+        const rect = card.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width * 100);
+        const y = ((e.clientY - rect.top) / rect.height * 100);
+        card.style.setProperty('--mx', x + '%');
+        card.style.setProperty('--my', y + '%');
+
+        // Holographic angle offset based on mouse position
+        const holo = card.querySelector('.holo-layer');
+        if (holo) {
+          const angle = Math.round((x - 50) * 1.5);
+          holo.style.background = `linear-gradient(
+            ${135 + angle}deg,
+            rgba(255,107,157,0.15) 0%,
+            rgba(192,132,252,0.12) 25%,
+            rgba(96,165,250,0.15) 50%,
+            rgba(45,212,191,0.12) 75%,
+            rgba(253,203,110,0.15) 100%
+          )`;
+        }
+      });
+
+      card.addEventListener('mouseleave', function() {
+        card.style.setProperty('--mx', '50%');
+        card.style.setProperty('--my', '50%');
+      });
+    });
+
+    // ---- Visitor Counter with animation ----
+    (function() {
+      let count = parseInt(localStorage.getItem('visitorCount') || '0', 10);
+      count++;
+      localStorage.setItem('visitorCount', count);
+
+      const el = document.getElementById('visitorCount');
+      if (!el) return;
+
+      // Animate counting up
+      const duration = 1500;
+      const start = performance.now();
+      function tick(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(count * eased).toLocaleString();
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+
+      const counterObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            requestAnimationFrame(tick);
+            counterObs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      counterObs.observe(el.closest('.counter-cosmos'));
+    })();
+
+    // Theme toggle moved to separate script block below
+
+    // ---- Guestbook ----
+    const gbForm = document.getElementById('gbForm');
+    const gbEntries = document.getElementById('gbEntries');
+
+    function loadEntries() {
+      const entries = JSON.parse(localStorage.getItem('guestbook') || '[]');
+      gbEntries.innerHTML = '';
+      entries.slice().reverse().forEach(entry => {
+        const div = document.createElement('div');
+        div.className = 'gb-entry glass-card scroll-reveal visible is-visible';
+        div.innerHTML = `
+          <div class="glass-reflection"></div>
+          <div class="gb-entry-header">
+            <strong class="gb-entry-name">${escapeHtml(entry.name)}</strong>
+            <span class="gb-entry-date">${entry.date}</span>
+          </div>
+          <p class="gb-entry-msg">${escapeHtml(entry.msg)}</p>
+        `;
+        gbEntries.appendChild(div);
+      });
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    if (gbForm) {
+      gbForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('gbName').value.trim();
+        const msg = document.getElementById('gbMsg').value.trim();
+        if (!name || !msg) return;
+
+        const entries = JSON.parse(localStorage.getItem('guestbook') || '[]');
+        const now = new Date();
+        const date = `${now.getFullYear()}.${String(now.getMonth()+1).padStart(2,'0')}.${String(now.getDate()).padStart(2,'0')}`;
+        entries.push({ name, msg, date });
+        localStorage.setItem('guestbook', JSON.stringify(entries));
+
+        document.getElementById('gbName').value = '';
+        document.getElementById('gbMsg').value = '';
+        loadEntries();
+      });
+
+      loadEntries();
+    }
+
+  }());
+  </script>
+
+  <!-- Theme toggle — independent script to avoid IIFE crash blocking -->
+  <script>
+  (function() {
+    var toggle = document.getElementById('themeToggle');
+    var label = document.getElementById('switchLabel');
+    if (!toggle || !label) return;
+
+    function updateSwitch(isLight) {
+      if (isLight) {
+        document.body.classList.add('light-mode');
+        toggle.classList.add('switch-on');
+        label.textContent = 'DARK';
+      } else {
+        document.body.classList.remove('light-mode');
+        toggle.classList.remove('switch-on');
+        label.textContent = 'LIGHT';
+      }
+    }
+
+    var saved = localStorage.getItem('theme');
+    updateSwitch(saved === 'light');
+
+    toggle.addEventListener('click', function() {
+      var isLight = !document.body.classList.contains('light-mode');
+      updateSwitch(isLight);
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  })();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
